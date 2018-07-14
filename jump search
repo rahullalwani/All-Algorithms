@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int jumpsearch(int a[],int x,int n)
+{
+    int step=sqrt(n);
+    int prev=0;
+
+    while(a[min(step,n)-1]<x)
+    {
+        prev=step;
+        step=step+sqrt(n);
+
+        if(prev>=n)              //finding the appropriate interval to search the array
+            return -1;
+    }//while
+
+    while(a[prev]<x)
+    {
+        prev++;
+        if(prev==min(step,n))           //traversing the interval in which the element may be found
+            return -1;
+    }//while
+
+    if(a[prev]==x)
+        return prev;
+
+    return -1;
+
+
+}//jump search
+int main()
+{
+    int n;
+    int a[10];
+    int num;
+    cin>>n;
+    for(int i=0;i<n;i++)
+        cin>>a[i];
+
+    for(int i=0;i<5;i++){
+    cin>>num;
+    int index=jumpsearch(a,num,n);
+    cout<<index<<endl;
+    }//for
+    return 0;
+}
