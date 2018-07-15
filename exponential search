@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int binarysearch(int a[],int num,int low,int high)
+{
+    while(low<=high)
+    {
+        int mid=(low+high)/2;
+        if(a[mid]==num)
+            return mid;
+        if(num<a[mid])
+            high=mid-1;
+        if(num>a[mid])
+            low=mid+1;
+
+    }//while
+    return -1;
+
+}
+int exponentialsearch(int a[],int num,int n)
+{
+    if(a[0]==num)
+        return 0;
+
+    int i=1;
+    while(i<n && a[i]<=num)
+    {
+        i=i*2;
+    }//while
+
+    return binarysearch(a,num,i/2,min(i,n-1));
+}//exponential search
+int main()
+{
+    int n;
+    int a[10];
+    int num;
+    cin>>n;
+    for(int i=0;i<n;i++)
+        cin>>a[i];
+    sort(a,a+n);
+    for(int i=0;i<5;i++){
+    cin>>num;
+    int index=exponentialsearch(a,num,n);
+    cout<<index<<endl;
+    }//for
+    return 0;
+}
