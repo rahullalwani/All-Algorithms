@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void selection_sort(int a[],int n)
+{
+    int min_indx;
+    for(int i=0;i<n-1;i++)
+    {
+        min_indx=i;
+        for(int j=i+1;j<n;j++)
+        {
+            if(a[j]<a[min_indx])
+            {
+                min_indx=j;
+            }
+
+        }//for
+        swap(a[min_indx],a[i]);
+    }//for
+}//selection sort
+int main()
+{
+    int a[]={45,12,58,47,55,72,78};
+    int n=sizeof(a)/sizeof(a[0]);
+    cout<<"Array before."<<endl;
+    for(int i=0;i<n;i++)
+        cout<<a[i]<<" ";
+    cout<<endl;
+    selection_sort(a,n);
+    cout<<"Array after"<<endl;
+    for(int i=0;i<n;i++)
+        cout<<a[i]<<" ";
+    cout<<endl;
+    return 0;
+}
