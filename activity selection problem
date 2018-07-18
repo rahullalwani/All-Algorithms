@@ -1,0 +1,102 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class activity
+{
+ private:
+    int st;
+    int ft;
+public:
+    activity()
+    {
+        st=0;
+        ft=0;
+    }
+    void set_activity(int a,int b)
+    {
+        st=a;
+        ft=b;
+    }
+    int getst()
+    {
+        return st;
+    }//int
+
+    int getft()
+    {
+        return ft;
+    }
+};
+
+int main()
+{
+    cout<<"Activity selection problem."<<endl;
+    cout<<"Enter the number of activities"<<endl;
+    int n,st,ft;
+    cin>>n;
+    activity a[n];
+    cout<<"Enter the data:"<<endl;
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter the start time of :"<<i+1<<" activity"<<endl;
+        cin>>st;
+        cout<<"Enter the finish time of :"<<i+1<<" activity"<<endl;
+        cin>>ft;
+        a[i].set_activity(st,ft);
+    }//for
+
+    //sorting the activities according to finish time
+
+    activity temp;
+
+    for(int i=0;i<n-1;i++)
+    {
+        for(int j=0;j<n-i-1;j++)
+        {
+           if(a[j].getft()>a[j+1].getft())
+           {
+               temp=a[j];
+               a[j]=a[j+1];
+               a[j+1]=temp;
+           }//if
+
+        }//for
+    }//for
+
+    /*for(int i=0;i<n;i++)
+    {
+        cout<<a[i].getft()<<" ";
+    }*/
+
+    int arr[n],k=0,j;
+
+    for(int i=0;i<n;i++)
+    {
+        if(i==0)
+        {
+            arr[k]=i;
+            k++;
+            j=i;
+        }//if
+        else
+        {
+            if(a[i].getst()>=a[j].getft())
+            {
+                arr[k]=i;
+                k++;
+                j=i;
+            }
+
+        }//else
+
+    }//for
+
+    cout<<"The maximum set of activities that can be performed are as follows:"<<endl;
+    for(int t=0;t<k;t++)
+    {
+        cout<<arr[t]<<" ";
+    }
+    cout<<endl;
+
+    return 0;
+}
