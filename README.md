@@ -19,10 +19,10 @@ val df = spark.read.parquet("/user/rahulp/dicomdf").
 ```
 This site was built using [GitHub pages]("www.google.com")
 
--Rahul
--Rohan
--Naman
+- Rahul
+- Rohan
+- Naman
 
-1.First
-2.Second
-3.Third
+1. First
+2. Second
+3. Third
