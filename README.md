@@ -26,3 +26,5 @@ This site was built using [GitHub pages]("www.google.com")
 1. First
 2. Second
 3. Third
+
+- [x] Finish
