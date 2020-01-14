@@ -12,3 +12,8 @@ git commit
 git add
 
 ```
+```scala
+
+val df = spark.read.parquet("/user/rahulp/dicomdf").
+
+```
