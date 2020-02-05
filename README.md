@@ -5,7 +5,7 @@ A library for reading the dicom images as a `spark SQL` data frame.
 
 ## Linking 
 
-This library is cross-published for `scala 2.11`.Also it was developed using java version `1.8.0_221`.The third party library
+This library is cross-published for `scala 2.11` and `java 1.8.0_221`.The third party library named
 `dcm-4che` source code was also used for developing the library.
  
 You can link against this library in your program at the following coordinates:
@@ -14,8 +14,8 @@ You can link against this library in your program at the following coordinates:
 #### Using Maven:
 ```
 <dependency>
-    <groupId>com.abzooba</groupId>
-    <artifactId>readDcm</artifactId>
+    <groupId>com.abzoobabd</groupId>
+    <artifactId>spark-dicom</artifactId>
     <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
@@ -25,7 +25,7 @@ You can link against this library in your program at the following coordinates:
 
 This library can also be added to spark jobs launched through `spark-shell` or `spark-submit` by using the `--packages`
 command line option. For example,to include it when starting the spark shell:
-    `$bin/spark-shell --packages com.abzooba:readDcm:1.0-SNAPSHOT`
+    `$bin/spark-shell --packages com.abzoobabd:spark-dicom:1.0-SNAPSHOT`
     
 Unlike using `--jars`,using `--packages` ensures that this library and its dependencies will be added to the classpath.
 The `--packages` argument can also be used with `bin/spark-submit`.
