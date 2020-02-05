@@ -9,8 +9,9 @@ This library is cross-published for `scala 2.11` and `java 1.8.0_221`.The third 
 
 This package doesn't have any releases published in the Spark Packages repo yet, or with maven coordinates supplied.
 You may have to build this package from source using `maven package` command and optionally it can also be installed 
-in the local maven repository using `maven install:install-file` command.The built JAR can be also be used as external
-dependency.
+in the local maven repository using `maven install:install-file` command.
+
+The built JAR can be also be used as external dependency by adding it to the class-path.
  
 ## Features
 
