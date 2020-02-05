@@ -14,7 +14,7 @@ You can link against this library in your program at the following coordinates:
 #### Using Maven:
 ```
 <dependency>
-    <groupId>com.abzoobabd</groupId>
+    <groupId>com.github.abzoobabd</groupId>
     <artifactId>spark-dicom</artifactId>
     <version>1.0-SNAPSHOT</version>
 </dependency>
