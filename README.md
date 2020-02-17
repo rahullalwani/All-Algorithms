@@ -68,7 +68,7 @@
 Variant link will render a button with the appearance of a link while maintaining the default padding and size of a button.
 
 <div>
-  <b-button `variant="link"` class="text-decoration-none ">Link</b-button>
+  <b-button variant="link">Link</b-button>
 </div>
 
 ```
@@ -76,9 +76,17 @@ Variant link will render a button with the appearance of a link while maintainin
 ### Block Level Button
 ```
 Create block level buttons — those that span the full width of a parent — by setting the block prop.
-<div>
-  <b-button `block` variant="primary">Block Level Button</b-button>
-</div>
 
+<div>
+  <b-button block variant="primary">Block Level Button</b-button>
+</div>
+```
+### Disabled State
+
+```
+<div>
+  <b-button disabled size="lg" variant="primary">Disabled</b-button>
+  <b-button disabled size="lg">Also Disabled</b-button>
+</div>
 
 ```
